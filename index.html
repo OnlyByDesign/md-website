@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!--Styles-->
+    <link href="css/rgs.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/open-sans.css"  type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/navigation.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/fontawesome-all.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/format.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="screen"/>
+    
+    
+    <!--jQuery-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    
+    <!--Greensock-->
+    <script src="js/TweenMax.min.js" type="text/javascript"></script>
+    <script src="js/TimelineMax.min.js" type="text/javascript"></script>
+    
+    <!--Backstretch-->
+    <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+    
+    <!--Video JS-->
+    <script src="js/vidbg.min.js" type="text/javascript"></script>
+    <script src="js/player.min.js" type="text/javascript"></script>
+    
+    <!--SVGeezy-->
+    <script src="js/svgeezy.min.js" type="text/javascript"></script>
+    
+    <!--Scripts-->
+    <script src="js/browser-sniff.js" type="text/javascript"></script>
+    <script src="js/header.js" type="text/javascript"></script>
+    <script src="js/voice.js" type="text/javascript"></script>
+    <script>
+    $(window).scroll(function() {
+        var videos = document.getElementsByTagName('video');
+        fraction = 0.5;
+
+        function checkScroll() {
+            for(var i = 0; i < videos.length; i++) {
+                var video = videos[i];
+                var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w,
+                    b = y + h,
+                    visibleX, visibleY, visible;
+                    visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+                    visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+                    visible = visibleX * visibleY / (w * h);
+
+                    if (visible > fraction) {
+                        if (video.played.length === 0)
+                        video.play();
+                    } else {
+                        if (video.onended)
+                        video.pause();
+                    }
+            }
+        }
+        window.addEventListener('scroll', checkScroll, false);
+        window.addEventListener('resize', checkScroll, false);
+    });
+    </script>
+    <script src="js/stickyScroll.js"></script>
+    <script> 
+        $(function(){
+          $("#header_wrap").load("header.html");
+        });
+    </script>
+    
+    <title>Marcolina Design</title>
+</head>
+
+<body>
+    
+    <div id="header_wrap">
+        <!--HEADER AREA-->
+    </div>
+    
+    <div id="splash_wrap">
+        <div id="splash">
+            <div id="logo_wrap">
+                <img id="sp_logo" src="media/marcolina_logo.svg" width="100%" border="0"/>
+            </div>
+        </div>
+        <div id="slide_white"></div>
+
+        <div id="slide_wrap">
+            <div id="slide1" class="slide"></div>
+            <div id="slide2" class="slide"></div>
+            <div id="slide3" class="slide"></div>
+        </div>
+
+    </div>
+    
+    <div id="hom">
+        <div id="header_spacer"></div>
+        
+        <!--Reel-->
+        <div id="reel" class="sec_bkg_wrap">
+            <div class="vidbg-container" style="position: absolute; z-index: 0; top: 0px; left: 0px; bottom: 0px; right: 0px; overflow: hidden; background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; background-image: none;">
+                <video autoplay loop muted style="margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: none; visibility: visible; opacity: 1; width: auto; height: 842px;">
+                    <source src="media/hom/marc.mp4" type="video/mp4"><source src="media/hom/marc.mp4" type="video/webm">
+                </video>
+            </div>
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_7_of_12"></div>
+                    <div class="col span_3_of_12">
+                        <img class="img_m" src="media/hom/reel.gif" border="0"/>
+                        <div class="exp"></div>
+                        <div class="exp"></div>
+                        <div class="exp"></div>
+                    </div>
+                    <div class="col span_2_of_12"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Vimeo Reel-->
+        <div id="vim_reel" class="sec_bkg_wrap vid">
+            <div class="sec_wrap">
+                <div class="exp"></div>
+                <div class="reel_close_wrap">
+                    <img id="reelClose" class="reel_close" src="media/hom/x.svg" border="0"/>
+                    <img id="reelClose" class="reel_close_exp" src="media/hom/x_exp.gif" border="0"/>
+                </div>
+                <div class="vid_wrap">
+                    <iframe id="dlreel" src="https://player.vimeo.com/video/149197895?title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                <div class="exp"></div>
+            </div>
+        </div>
+        
+        <!--CTA-->
+        <div id="cta" class="sec_bkg_wrap">
+            <div class="sec_wrap">
+                <div class="col span_6_of_12 inline">
+                    <div class="exp"></div>
+                    <a href="javascript:drawReel()">
+                        <div id="drawReel" class="center link_hit" onmouseover="reelBtnOver('#reel .link')" onmouseout="reelBtnOut('#reel .link')">
+                            <h5>tap to view demo reel</h5>
+                        </div>
+                    </a>
+                    <div class="exp"></div>
+                </div>         
+                <div class="col span_6_of_12 inline">
+                    <div class="exp"></div>
+                    <a href="featured.html"><h5 class="center feat_hit">view featured work</h5></a>
+                    <div class="exp"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Portfolio Title-->
+        <div id="prf_t" class="sec_bkg_wrap">
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_1_of_12"></div>
+                    <div class="col span_10_of_12"><div class="exp_brk"></div>
+                    <h1 class="brk-prt"><span class="line" style="color: #555;">Good design <span class="light">is the result of</span></span>
+                    <span class="line" style="color: #555;"> an a-ha moment...</span>
+                    <br><span class="line">A convergence of intuition</span> <span class="line">and information.</span></h1>
+                    <p class="brk">This magic moment of discovery only comes through collaboration. At <span style="color:#ffa300">Marcolina Design</span>, we work with you to understand the core of your brand to create a coherent and creative solution. The print, interactive, video or mobile design solution we strive for can only coexist within the unique character of your company.</p>
+                    <p class="brk_alt">Below you will find samples from our array of design services including: <strong>Print Work</strong>: branding, brochures and collateral; <strong>Interactive Work</strong>: websites, email blasts, banners and trade show kiosks; <strong>Video Work</strong>: TV and movie titles, web explainer videos and corporate image pieces; <strong>Mobile Work</strong>: tablet and phone apps, eBooks, living ads and interactive brochures. <strong>Augmented Work</strong>: Virtual Reality, Augmented Reality and Mobile Enhanced web apps.</p>
+                        <div class="sec_wrap center">
+                            <a href="#vm_ware">
+                            <i class="arrow center fas fa-chevron-down"></i>
+                            </a>
+                        </div>
+                        <div class="exp_brk"></div>
+                    </div>
+                    <div class="col span_1_of_12"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--VM Ware-->
+        <div id="vm_ware" class="sec_border" style="background-color: #1F6A33">
+            <video id="myVid" width="100%" muted>
+                <source type="video/mp4" src="media/vid/vmware.mp4">
+            </video>
+            <img id="mob_img" src="media/vid/vmware.png" />
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_6_of_12"></div>
+                    <div class="col span_6_of_12 hold">
+                        <div class="exp"></div>
+                        <h2>VMware</h2><h3>eBooks, Web, Video, Print</h3>
+                        <p>Currently ranked 4th in the world for software companies, VMware has worked with us over the past 4 or 5 years to design and build a wide variety of media.</p>
+                        <div class="link_wrap">
+                            <div class="link">
+                                <a href="vm-ware.html">
+                                <div class="link_hit">CLICK TO VIEW</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="exp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--AON-->
+        <div id="aon" class="sec_border" style="background-color: #22C5C0">
+             <video id="myVid" width="100%" muted>
+                <source type="video/mp4" src="media/vid/aon.mp4">
+            </video>
+            <img id="mob_img" src="media/vid/aon.png" />
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_6_of_12"></div>
+                    <div class="col span_6_of_12 hold"><div class="exp"></div><h2>Aon Insurance</h2><h3>Print, Web, Video, Email</h3><p>Over the last year we have produced a wide variety of media including websites, Powerpoints, email blasts, ebooks, and videos for Aon - one of our newest clients. </p>
+                    <div class="link_wrap">
+                        <div class="link">
+                            <a href="aon.html">
+                                <div class="link_hit">CLICK TO VIEW</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="exp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Business Wire-->
+        <div id="b_wire" class="sec_border" style="background-color: #22C5C0">
+            <video id="myVid" width="100%" muted>
+                <source type="video/mp4" src="media/vid/bw.mp4">
+            </video>
+            <img id="mob_img" src="media/vid/bw.png" />
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_6_of_12"></div>
+                    <div class="col span_6_of_12 hold"><div class="exp"></div><h2>Business Wire</h2><h3>Print, Web, Video, Email</h3><p>For over 20 years we have been creating a multitude of branded assets for Business Wire (a Warren Buffet Company) from tradeshow booths to email blasts.</p>
+                    <div class="link_wrap">
+                        <div class="link">
+                            <a href="bw.html">
+                                <div class="link_hit">CLICK TO VIEW</div>
+                            </a></div>
+                    </div>
+                    <div class="exp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Adobe-->
+        <div id="adobe" class="sec_border" style="background-color: #5E6973">
+            <video id="myVid" width="100%" muted>
+                <source type="video/mp4" src="media/vid/adobe.mp4">
+            </video>
+            <img id="mob_img" src="media/vid/adobe.png" />
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_6_of_12"></div>
+                    <div class="col span_6_of_12 hold"><div class="exp"></div>
+                    <h2>Adobe</h2>
+                    <h3>Video, Live, Presentation, eBooks</h3>
+                    <p>We have been working with Adobe since 1994 on some of our most unusual projects. Including a crazy live show on the history of Photoshop. To one of the first eBooks ever done in the digital publishing platform.</p>
+                    <div class="link_wrap">
+                        <div class="link">
+                            <a href="adobe.html">
+                                <div class="link_hit">CLICK TO VIEW</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="exp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--IKEA-->
+        <div id="ikea" class="sec_border" style="background-color: #0177AC">
+            <video id="myVid" width="100%" muted>
+                <source type="video/mp4" src="media/vid/ikea.mp4">
+            </video>
+            <img id="mob_img" src="media/vid/ikea.png" />
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_6_of_12"></div>
+                    <div class="col span_6_of_12 hold"><div class="exp"></div><h2>IKEA</h2><h3>Social, Web, Video, eMail</h3><p>IKEA corporate offices are only a few minutes from our office and we have enjoyed a long relationship with them on special projects.</p><div class="link_wrap">
+                        <div class="link">
+                            <a href="ikea.html">
+                            <div class="link_hit">CLICK TO VIEW</div>
+                            </a></div>
+                        </div><div class="exp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Childrens Hospital-->
+        <div id="c_hosp" class="sec_border" style="background-color: #5E6973">
+            <video id="myVid" width="100%" muted>
+                <source type="video/mp4" src="media/vid/childrens2.mp4">
+            </video>
+            <img id="mob_img" src="media/vid/childrens.png" />
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_6_of_12"></div>
+                    <div class="col span_6_of_12 hold"><div class="exp"></div><h2>Children's Hospital</h2><h3>Web, Show Graphics, Video</h3><p>Nicklaus Children's Hospital is a world leader in pediatric healthcare. We have teamed with them over the last 3 years to design marketing materials for 3 major program seminars.</p>
+                        <div class="link_wrap">
+                            <div class="link">
+                                <a href="ch-hosp.html">
+                                <div class="link_hit">CLICK TO VIEW</div>
+                                </a></div>
+                        </div><div class="exp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--IDG-->
+        <div id="idg" class="sec_border" style="background-color: #1F6A33">
+            <video id="myVid" width="100%" muted>
+                <source type="video/mp4" src="media/vid/idg.mp4">
+            </video>
+            <img id="mob_img" src="media/vid/idg.png" />
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_6_of_12"></div>
+                    <div class="col span_6_of_12 hold"><div class="exp"></div><h2>IDG</h2><h3>Print, Web, Video, Exhibit</h3><p>The world’s leading technology media company and manages major events like E3. We partnered with them to create entire trade show graphics and in-show events for MacWorld and others.  </p>
+                        <div class="link_wrap">
+                            <div class="link">
+                                <a href="idg.html">
+                                <div class="link_hit">CLICK TO VIEW</div>
+                                </a></div>
+                        </div><div class="exp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Other Projects-->
+        <div id="other_work" style="position: relative; border-top: 5px solid orange;">
+            <div class="sec_wrap">
+                <div class="exp_brk"></div>
+                <h1 class="brk">Design Services</h1>
+                <div class="section group">
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                            <a href="print.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/branding.png" />
+                                    <h4>Print/Branding<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/print-over.jpg" width="100%" height="100%" border="0"/></div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="video.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/video%20copy.png" />
+                                    <h4>Video/Motion<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/video-over.jpg" width="100%" height="100%" border="0"/></div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="interactive.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/interactive%20copy.png" />
+                                    <h4>Interactive<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/interactive-over.jpg" width="100%" height="100%" border="0"/></div>
+                             </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="ebook.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/ebook%20copy.png" />
+                                    <h4>Tablet eBook<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/ebook-over.jpg" width="100%" height="100%" border="0"/></div>
+                             </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="vrar.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/virtual%20copy.png" />
+                                    <h4>VR and AR<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/arvr-over.jpg" width="100%" height="100%" border="0"/></div>
+                             </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="email.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/email%20copy.png" />
+                                    <h4>Email Blast<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/email-over.jpg" width="100%" height="100%" border="0"/></div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="tradeshow.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/tradeshow%20copy.png" />
+                                    <h4>Trade Show<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/tradeshow-over.jpg" width="100%" height="100%" border="0"/></div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="presentation.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/presentation%20copy.png" />
+                                    <h4>Presentation<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/presentation-over.jpg" width="100%" height="100%" border="0"/></div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="clnt_wrk" class="col span_4_of_12">
+                         <div class="other_wrap">
+                             <a href="special.html">
+                                <div class="txt_wrap">
+                                    <img class="clnt_img" src="media/hom/icon/project%20copy.png" />
+                                    <h4>Special Project<br>Design</h4>
+                                 </div>
+                                 <div class="other_hit"><img src="media/hom/special-over.jpg" width="100%" height="100%" border="0"/></div>
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="exp_brk"></div>
+            </div>
+        </div>
+        
+        <!--About-->
+        <div id="abt_t" class="sec_bkg_wrap">
+            <div class="sec_wrap">
+                <div class="section group">
+                    <h1 class="abt">"Creating good design is not about moving images and type around. It is about moving your audience, your product, your shareholder, your cause.”</h1>
+                    <div class="col span_6_of_12 abt_txt">
+                        <div class="exp_brk" style="height:4em;"></div>
+                        <h2 class="abt">About Marcolina Design Inc</h2>
+                        <p class="abt">My partner, Denise Marcolina and I lead a team of digital designers, working with national and regional companies, to help shape their brand, and tell their story through print and digital media. We've earned a national reputation over more than two decades, shaping unique design solutions across <span style="color:#222">print, interactive, video, tablet</span> and more. Our strength is bringing unexpected, memorable design solutions that are cohesive across medias. We take on design projects of any size. For a deeper look at how we could bring that A-ha moment to your next marketing challenge, give me a call.</p>
+                        <div class="exp_brk"></div>
+                    </div>
+                    <div class="col span_6_of_12">
+                        <video id="abt_video" width="100%" autoplay muted loop>
+                            <source type="video/mp4" src="media/hom/bird.mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Contact-->
+        <div id="cnt_t" class="footer sec_bkg_wrap">
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="exp_brk" style="height:3em;"></div>
+
+                    <div class="col span_3_of_12 ft_fit ft_info">
+                        <h1 class="brk">Contact</h1>
+                        <h2 class="cnt"><a href="mailto:orders@marcolina.com" target="_blank">studio@marcolina.com</a></h2>
+                        <div class="exp_brk" style="height:2em;"></div>
+                        <p class="cnt">215.653.7000 <br>300 Brookside Avenue <br>Ambler, PA, 19115</p>
+                        <div class="ft_strike" style="position: relative; bottom: 0; margin: 0 auto; height: 1px; background-color: #ffa300;"></div>
+                    </div>
+
+                    <div class="col span_4_of_12 ft_fit">
+                        <div class="cnt_soc"><a href="#">
+                            <i class="center fab fa-facebook-f" aria-hidden="true"></i>
+                        </a></div>
+                        <div class="cnt_soc"><a href="#">
+                            <i class="center fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a></div>
+                        <div class="cnt_soc"><a href="#">
+                            <i class="center fab fa-twitter" aria-hidden="true"></i>
+                        </a></div>
+                    </div>
+
+                    <div class="col span_5_of_12 ft_hide">
+                        <div id="history_dsc"><a href="http://marcolina.com/25years"><img id="history_btn" src="media/hom/history.jpg" width="100%" border="0"/></a><div class="dsc_txt_box"><h1>Click to View</h1></div></div>
+                    </div>
+                    <div class="exp_brk" style="height:2em;"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
