@@ -1,0 +1,140 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Typography*/
+h1, h2, h3, h4, h5, h6, h7, h8, h9, p, em, sup, strong, span, div, html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {margin-bottom: .3em; font-weight: 100; font-style: normal; font-size: 4.16em; color: white; letter-spacing: 0; line-height: 1.2em;}
+h2 {margin-bottom: 0em; font-weight: 700; font-style: normal; font-size: 4.16em; color: white; letter-spacing: 0; line-height: 1em;}
+h3 {margin-bottom: .7em; font-weight: 300; font-style: normal; font-size: 2.6em; color: white; letter-spacing: -.02em; line-height: 1em;}
+h4 {margin-bottom: .2em; font-weight: 300; font-style: normal; font-size: 2.6em; color: white; letter-spacing: -.05em; line-height: 1em;}
+p {font-weight: 400;font-style: normal;font-size: 1.3em;color: white;letter-spacing: 0em;line-height: 1.25em;}
+strong {font-weight: 700;}
+span.line {display: inline-block;}
+span.light {color: #666;}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 0 0 0 0;
+    min-height: 1px;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+.center {margin: 0 auto; right: 0; left: 0; text-align: center;}
+
+
+/*  GRID OF TWELVE  */
+.span_12_of_12 {
+	width: 100%;
+}
+
+.span_11_of_12 {
+  	width: 91.66%;
+}
+.span_10_of_12 {
+  	width: 83.33%;
+}
+
+.span_9_of_12 {
+  	width: 75%;
+}
+
+.span_8_of_12 {
+  	width: 66.66%;
+}
+
+.span_7_of_12 {
+  	width: 58.33%;
+}
+
+.span_6_of_12 {
+  	width: 50%;
+}
+
+.span_5_of_12 {
+  	width: 41.66%;
+}
+
+.span_4_of_12 {
+  	width: 33.33%;
+}
+
+.span_3_of_12 {
+  	width: 25%;
+}
+
+.span_2_of_12 {
+  	width: 16.66%;
+}
+
+.span_1_of_12 {
+  	width: 8.333%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0 0 0 0; min-height: 0px;}
+    
+    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+	width: 100%; 
+	}
+}

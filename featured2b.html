@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<style type="text/css">
+a:link {
+    color: #707070;
+}
+a:visited {
+    color: #A0A0A0;
+}
+a:hover {
+    color: #E79B00;
+}
+a:active {
+    color: #FFB217;
+}
+.trigger {width:100%;height:100%;position:absolute; background-color:transparent;z-index:1;}
+</style>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!--Styles-->
+    <link href="css/rgs.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="fonts/fonts.css"  type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/navigation.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/fontawesome-all.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/work.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="screen"/>
+          
+    <!--jQuery-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    
+    <!--Greensock-->
+    <script src="js/TweenMax.min.js" type="text/javascript"></script>
+    <script src="js/TimelineMax.min.js" type="text/javascript"></script>
+    
+    <!--Backstretch-->
+    <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+    
+    <!--SVGeezy-->
+    <script src="js/svgeezy.min.js" type="text/javascript"></script>
+    
+    <!--Scripts-->
+    <script src="js/header.js" type="text/javascript"></script>
+    <script src="js/footer.js" type="text/javascript"></script>
+    <script src="js/stickyScroll.js" type="text/javascript"></script>
+    <script src="js/voice.js" type="text/javascript"></script>
+    <script src="//edge-player.wirewax.com/ww4release/javascripts/wirewax-iframe-api.js" type="text/javascript"></script>
+    <script src="js/ww-integrate.js" type="text/javascript"></script>
+    <script>
+        var workIndex = 0;
+        $(function(){
+          $("#header_wrap").load("header.html"); 
+          $("#footer_wrap").load("footer2.html");
+        });
+        $(function(){
+            if ($(window).width() <= 768) {
+                $('#poster video source').attr('src', 'media/client/feat/feat-head2-sm.mp4');
+                $("#poster video")[0].load();
+            }
+            if ($(window).width() > 768) {
+                $('#poster video source').attr('src', 'media/client/feat/feat-head2-lrg.mp4');
+                $("#poster video")[0].load();
+            }
+        });
+        $(window).resize(function() {
+            if ($(window).width() <= 768) {
+                $('#poster video source').attr('src', 'media/client/feat/feat-head2-sm.mp4');
+                $("#poster video")[0].load();
+            }
+            if ($(window).width() > 768) {
+                $('#poster video source').attr('src', 'media/client/feat/feat-head2-lrg.mp4');
+                $("#poster video")[0].load();
+            }
+        });
+    </script>
+    <title>Marcolina Design | Featured Work</title>
+</head>
+
+<body>
+    
+    <div id="header_wrap">
+        <!--HEADER AREA-->
+    </div>
+    
+    <div id="work">
+        
+        <div id="header_spacer"></div>
+
+        <!--Poster Image-->
+        <div id="poster" class="sec_bkg_wrap feat_poster" style="border-bottom: none">
+            <video width="100%" muted autoplay loop playsinline>
+                <source type="video/mp4" src="media/client/feat/feat-head2-lrg.mp4">
+            </video>
+        </div>
+        
+        <!--Vimeo Reel-->
+        <style>
+            .reel_close_wrap {width: 50px; height: 50px; position: absolute; z-index: 1;}
+            #cta {background-color: lightgrey; border: none; height: 50px;} 
+            #cta h5 {font-size: 16px; text-transform: uppercase; color: black; line-height: 50px; font-weight: bold;}
+        </style>
+        <div id="vim_reel" class="sec_bkg_wrap vid" style="border-bottom:none; display:block;">
+            <div class="sec_wrap">
+                <div class="exp"></div>
+                <div class="reel_close_wrap">
+                    <img id="reelClose" class="reel_close" src="media/hom/x.svg" border="0"/>
+                    <img id="reelClose" class="reel_close_exp" src="media/hom/x_exp.gif" border="0"/>
+                </div>
+                <div class="vid_wrap">
+                    <iframe id="dlreel" src="https://player.vimeo.com/video/149197895?title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+                </div>
+                <div class="exp"></div>
+            </div>
+        </div>
+        <div id="cta" class="sec_bkg_wrap">
+            <div class="sec_wrap">
+                <div class="col span_12_of_12 inline">
+                    <a href="javascript:drawReel()">
+                        <div id="drawReel" class="center link_hit" onmouseover="reelBtnOver('#reel .link')" onmouseout="reelBtnOut('#reel .link')">
+                            <h5>tap to view demo reel</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!--Navigation Wrap-->
+        <div id="nav-wrapper">
+            <div class="mobile-toggle">
+                Select Project
+            </div>
+          <nav id="main-nav">
+              <a href="#work1">Business Wire</a>
+              <a href="#work2">Adobe</a>
+              <a href="#work3">Unisys</a>
+              <a href="#work4">Ricoh</a>
+              <a href="#work5">Barrel Pouch</a>
+          </nav>
+        </div>
+        
+        <!--Work 1-->
+        <div id="work1"></div>
+        <div id="work_t" class="sec_bkg_wrap">
+            <div id="work1" class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_3_of_12"></div>
+                    <div class="col span_6_of_12"><div class="exp"></div>
+                        <h1>Business Wire</h1>
+                        <h2>Product Launch Explainer</h2>
+                        <p>Business Wire has just launched its partnership with TrendKite a business analytics company. To educate their audience on the advantages of adding this package to their news reporting we created this interactive tool to evaluate the benefits of upgrading.</p>
+                        <p class="hilite">HOW TO INTERACT with video below:<br/>
+                        Tap on circle graphics to get more insite on each trendkite benifit</p><div class="exp"></div></div>
+                    <div class="col span_3_of_12"></div>
+                        
+                    <div class="col span_3_of_12"></div>
+                </div>
+            </div>
+        </div>
+        <!--Start-->
+        <div class="sec_bkg_wrap vid">
+            <div class="sec_wrap1">
+                <div class="vid_wrap">
+                    <div id="pauseTrigger1" class="trigger" onclick="playVideo1();pauseVideo2();pauseVideo3();pauseVideo4();pauseVideo5();"></div>
+                    <iframe src="//embed.wirewax.com/8106846/" frameborder="0" id="frame1" height="300px" width="533px" scrolling="yes" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <!--Work 2-->
+        <div id="work2"></div>
+        <div id="work_t" class="sec_bkg_wrap">
+            <div class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_3_of_12"></div>
+                    <div class="col span_6_of_12"><div class="exp"></div>
+                        <h1>Ginger Dan Travels the World</h1>
+                        <h2>A Digital Campaign Explainer</h2>
+                        <p>As gold medal winners in some recent international design competitions, we were asked to create an interactive overview of one of our digital campaigns for a non-english speaking audience. The viewer can explore all the aspects of the work without sorting through numerous links and different kinds of media files. And can get a quick understanding of the concept and reach of the promotion.   </p>
+                        <p class="hilite">HOW TO INTERACT WITH VIDEO BELOW:<br/>
+                  Tab through chapters using menu on left side of video</p><div class="exp"></div></div>
+                    <div class="col span_3_of_12"></div>
+                </div>
+            </div>
+        </div>
+        <!--Start-->
+        <div class="sec_bkg_wrap vid">
+            <div class="sec_wrap1">
+                <div class="vid_wrap">
+                    <div id="pauseTrigger2" class="trigger" onclick="playVideo2();pauseVideo1();pauseVideo3();pauseVideo4();pauseVideo5();"></div>
+                    <iframe id="frame2" src="http://embed.wirewax.com/8079476/?autoStart=false&loop=true" frameborder="0" scrolling="yes" allowfullscreen allow=autoplay></iframe>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--Work 3-->
+        <div id="work3"></div>
+        <div id="work_t" class="sec_bkg_wrap">
+            <div id="work1" class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_3_of_12"></div>
+                    <div class="col span_6_of_12"><div class="exp"></div>
+                        <h1>Unisys</h1>
+                        <h2>App Explainer</h2>
+                        <p>The interactive video below was built as an aid to introduce a new employee mobile app we created to Unisys managment without having them download and explore the lenghty content on their own time. It gave them quick insite and talking points to promote the initiative without a download. </p>
+                        <p class="hilite">HOW TO INTERACT WITH VIDEO BELOW:<br/>
+                        Skim through aspects of app using menu on left side of video </p><div class="exp"></div></div>
+                    <div class="col span_3_of_12"></div>
+                </div>
+            </div>
+        </div>
+        <!--Start-->
+        <div class="sec_bkg_wrap vid">
+            <div class="sec_wrap1">
+                <div class="vid_wrap">
+                    <div id="pauseTrigger3" class="trigger" onclick="playVideo3();pauseVideo1();pauseVideo2();pauseVideo4();pauseVideo5();"></div>
+                    <iframe id="frame3" src="http://embed.wirewax.com/8096477/?autoStart=false&loop=true" frameborder="0" scrolling="yes" allowfullscreen allow=autoplay></iframe>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--Work 4-->
+        <div id="work4"></div>
+        <div id="work_t" class="sec_bkg_wrap">
+            <div class="sec_wrap">
+                <div class="section group">ww
+                    <div class="col span_3_of_12"></div>
+                    <div class="col span_6_of_12"><div class="exp"></div>
+                        <h1>BWIM</h1>
+                        <h2>Produt Launch Explainer</h2>
+                        <p>Business Wire has just launched its Interactive Media service which transforms how news is delivered and consumed. To best tell the story of how the service works we used their technology to author a dynamic interactive video with key hotspots for viewers to dig deeper on any aspect they wish. And on each click the backend system collects valuable anylitics on viewers intrests. </p>
+                        <p class="hilite">HOW TO INTERACT WITH VIDEO BELOW:<br/>every time you see the hand/target icon you can tap to learn more</p><div class="exp"></div></div>
+                    <div class="col span_3_of_12"></div>
+                </div>
+            </div>
+        </div>
+        <!--Start-->
+        <div class="sec_bkg_wrap vid">
+            <div class="sec_wrap1">
+                <div class="vid_wrap">
+                    <div id="pauseTrigger4" class="trigger" onclick="playVideo4();pauseVideo1();pauseVideo2();pauseVideo3();pauseVideo5();"></div>
+                    <iframe id="frame4" src="http://embed.wirewax.com/8086062/?autoStart=false&loop=true" frameborder="0" scrolling="yes" allowfullscreen allow=autoplay></iframe>
+                </div>
+            </div>
+        </div>
+       
+        
+        <!--Work 5-->
+        <div id="work5"></div>
+        <div id="work_t" class="sec_bkg_wrap">
+            <div id="work1" class="sec_wrap">
+                <div class="section group">
+                    <div class="col span_3_of_12"></div>
+                    <div class="col span_6_of_12"><div class="exp"></div>
+                        <h1>Adobe</h1>
+                        <h2>Photoshop Disassembled </h2>
+                        <p>To give a new and longer life to this Photoshop World video open that we created, we built interactive hotspots back in after the fact. So through out the play time users can get deeper understanding of the many moble app spin offs Adobe has created from Photoshop. They can also purchase and se sample work from each app. </p>
+                        <p class="hilite">HOW TO INTERACT WITH VIDEO BELOW:<br/>
+                  wait to see a plus sign in a black circle and then tap</p><div class="exp"></div></div>
+                    <div class="col span_3_of_12"></div>
+                </div>
+            </div>
+        </div>
+        <!--Start-->
+        <div class="sec_bkg_wrap vid">
+            <div class="sec_wrap1">
+                <div class="vid_wrap">
+                    <div id="pauseTrigger5" class="trigger" onclick="playVideo5();pauseVideo1();pauseVideo2();pauseVideo3();pauseVideo4();"></div>
+                    <iframe id="frame5" src="http://embed.wirewax.com/8033468/?autoStart=false&loop=true" frameborder="0" scrolling="yes" allowfullscreen allow=autoplay></iframe>
+                </div>
+            </div>       
+        </div>
+    
+    <div id="footer_wrap">
+        <!--FOOTER AREA-->
+    </div>
+        
+</div>
+<script src="js/ww-integrate.js" type="text/javascript"></script>
+<script>
+    $('#cta, #drawReel, #cta h5').click(function(){
+        $('#poster').slideUp(800); 
+    });
+    $('img#reelClose, img.reel_close_wrap').click(function(){
+       $('#poster').slideDown(800); 
+    });
+</script>
+    
+</body>
+    
+</html>

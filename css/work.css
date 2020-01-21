@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {margin: 0;padding: 0;}
+html, body {width: 100%; height: 100%;}
+body {font-size: 100%; background-color: white;}
+
+/*Universal*/
+img {display: block;/*margin: -5px;*/}
+.img_m {display: none; width: 100%;}
+.exp {position: relative; top: 0; left: 0; width: 100%; height: 1px; clear: both;}
+.center {margin: 0 auto; text-align: center; right: 0; left: 0;}
+.inline {display: inline-block; vertical-align: top;}
+
+/*Typography*/
+h1 {margin-bottom: .1em; font-family: sans-serif; font-weight: 100; font-style: normal; font-size: 5em; color: #ffa300; letter-spacing: -.05em; line-height: 1em; text-align: center;}
+h2 {margin-bottom: .7em; font-family: sans-serif; font-weight: 300; font-style: normal; font-size: 2.6em; color: grey; letter-spacing: -.02em; line-height: 1em; text-align: center;}
+h3 {font-family: sans-serif; font-weight: 200; font-style: normal; font-size: 1.8em; color: white; letter-spacing: -.02em; line-height: 1em; text-align: center; text-transform: uppercase;}
+p {margin-bottom: .9em; font-family: sans-serif; font-weight: 200; font-style: normal; font-size: 1.2em; color: grey; letter-spacing: 0em; line-height: 1.5em; text-align: center;}
+p.hilite {margin-bottom: 0; font-family: sans-serif; font-size: 1em; color: #ffa300; text-transform: uppercase;}
+
+/*Links*/
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+.link {position: relative; top: 0; left: 0; margin-top: .6em; padding: .35em .2em .2em; max-width: 8em; background-color: rgba(255,255,255,.8); -webkit-border-radius: .4em; -moz-border-radius: .4em; -ms-border-radius: .4em; -o-border-radius: .4em; border-radius: .4em; font-family: sans-serif; font-weight: 200; font-style: normal; font-size: .9em; color: grey; letter-spacing: 0em; line-height: 1.5em; text-align: center;}
+.link a:link {font-family: sans-serif; color: grey; text-decoration: none;}
+.link a:visited {font-family: sans-serif; color: grey; text-decoration: none;}
+.link a:hover {font-family: sans-serif; color: #646464; text-decoration: none;}
+
+/*Intro*/
+p.hilite {margin-bottom: 0; font-size: 1em; color: #ffa300; text-transform: uppercase;}
+.desc p {text-align: left; color: white;}
+
+
+/*Work*/
+#work {display: block; position: relative; top: 0; left: 0; width: 100%;}
+.work_exp {position: relative; top: 0; left: 0; width: 100%; height: 1px;}
+#myVid {z-index: 1;min-width: auto;min-height: 625px;width: 100%;height: auto;}
+#work img, #work video {margin-bottom: -5px;}
+
+/*Poster*/
+#poster {position: relative;top: 0;left: 0;width: 100%;height: auto;clear: both;}
+#poster img, #poster video {width: 100%; height: 550px; object-fit: cover;}
+#feat_poster_sm {display:none;}
+
+/*Sections*/
+.sec_bkg_wrap_full {position: relative; margin: 0 auto; top: 0; left: 0; width: 100%; background-color: transparent; overflow: hidden;}
+.sec_bkg_wrap {position: relative;margin: 0 auto;top: 0;left: 0;width: 100%;max-width: 2000px;background-color: white;overflow: hidden;white-space: nowrap;border-bottom: 5px solid #ffa300;}
+.sec_bkg {position: absolute; top: 0; left: 0; width: 100%;}
+.sec_wrap {position: relative;top: 0;left: 0;margin: 0 auto;width: 100%;max-width: 1200px;white-space: normal;}
+.sec_wrap .exp {position: relative; top: 0; left: 0; width: 100%; height: 4em; clear: both;}
+
+/*Subhead*/
+.subhead_wrap {position: absolute;top: 0;left: 0;width: 100%;max-width: 2500px;overflow: hidden;background-color: transparent;text-align: center; display: none;}
+.subhead_bkg {display: inline-block; position: relative; background-color: #ffa300;}
+.subhead_bkg h2 {margin: .4em .5em .2em; padding: 0; font-family: sans-serif; font-weight: 200; font-style: normal; font-size: 1.2em; color: white; letter-spacing: 0em; line-height: 1em; text-align: center; text-transform: uppercase; }
+
+/*Vimeo Videos*/
+.vid {background-color: #646464;}
+.vid .exp {position: relative; top: 0; left: 0; width: 100%; height: 3em;}
+.vid_wrap {position: relative; padding-bottom: 56.25%; height: 0;}
+.vid_wrap iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.vid_port {z-index: 1; min-width: auto; width: 100%; height: auto;}
+
+/*Description Sections*/
+.desc p {margin: 0;}
+.desc h3 {color: #ffa300; text-transform: capitalize; padding-bottom: 5px; text-align: left; font-size: 1.2em; font-weight: bold; display: inline-block; margin-bottom: 0; letter-spacing: 1px;}
+.desc2 {text-align: left !important;}
+.desc2 p {display: inline; padding-left: 10px;}
+
+/*For Choice Hotels Project*/
+.ratio1_vid_wrap {position: relative; padding-bottom: 17.7%; height: 0;}
+.ratio1_vid_wrap iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.ratio2_vid_wrap {position: relative; padding-bottom: 22.7%; height: 0;}
+.ratio2_vid_wrap iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.ratio4_3_vid_wrap {position: relative; padding-bottom: 68%; height: 0;}
+.ratio4_3_vid_wrap iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+/*Footer*/
+#footer_wrap {position: relative; top: 0; left: 0; width: 100%;}
+#footer {position: relative; top: 0; left: 0; width: 100%; max-width: 2000px; background-color: #646464;}
+.footer_btn {position: relative; top: 0; left: 0; padding: 1.4em;}
+
+#prev_btn {background-color: #ffa300;}
+#top_btn {background-color: #ffa300;}
+#next_btn {background-color: #ffa300;}
+
+a:hover #prev_btn {background-color: grey;}
+a:hover #top_btn {background-color: grey;}
+a:hover #next_btn {background-color: grey;}
+
+.prev_arrow {display: inline; position: relative; top: 0; left: 0; margin-right: .4em; width: .75em;}
+.top_arrow {display: inline; position: relative; top: 0; left: 0; margin-right: .4em; width: .75em;}
+.next_arrow {display: inline; position: relative; top: 0; left: 0; margin-left: .4em; width: .75em;}
